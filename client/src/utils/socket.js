@@ -4,7 +4,7 @@ import {
 
 const socket =
   io(
-    "http://localhost:5000",
+    "https://foodrush-1q1y.onrender.com",
     {
       withCredentials: true,
     }
