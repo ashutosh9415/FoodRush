@@ -187,7 +187,7 @@ function Navbar() {
             setShowUserMenu(false)
           }
         >
-          <span className="text-3xl font-black italic tracking-tight text-orange-500">
+          <span className="text-3xl font-black italic tracking-tight text-orange-400">
             FoodRush
           </span>
         </Link>
