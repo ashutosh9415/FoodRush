@@ -23,7 +23,7 @@ function Orders() {
     try {
       const response =
         await api.get(
-          "/order/my-orders"
+          "/api/order/my-orders"
         );
 
       setOrders(
@@ -45,7 +45,7 @@ function Orders() {
       try {
         const response =
           await api.get(
-            "/order/my-orders"
+            "/api/order/my-orders"
           );
 
         const myOrders =

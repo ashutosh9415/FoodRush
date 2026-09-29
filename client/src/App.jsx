@@ -67,7 +67,7 @@ function App() {
         />
 
         <Route
-          path="/orders"
+          path="/api/orders"
           element={
             <ProtectedRoute
               allowedRoles={[

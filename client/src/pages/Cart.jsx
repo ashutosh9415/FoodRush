@@ -83,7 +83,7 @@ function Cart() {
     setLoading(true);
 
     try {
-      const response = await api.post("/order", {
+      const response = await api.post("/api/order", {
         items: cart.map((item) => ({
           food: item._id,
           name: item.name,
@@ -98,7 +98,7 @@ function Cart() {
 
       if (paymentMethod === "COD") {
         clearCart();
-        navigate("/orders");
+        navigate("/api/orders");
         return;
       }
 
@@ -141,7 +141,7 @@ const currency =
         handler: async function (paymentResponse) {
           try {
             await api.post(
-              "/order/verify-payment",
+              "/api/order/verify-payment",
               {
                 orderId,
                 razorpayOrderId:
@@ -154,7 +154,7 @@ const currency =
             );
 
             clearCart();
-            navigate("/orders");
+            navigate("/api/orders");
           } catch (error) {
             setError(
               error.response?.data?.message ||

@@ -307,7 +307,7 @@ function Register() {
       // ======================================
 
       await api.post(
-        "/user/register",
+        "/api/user/register",
         userData
       );
 

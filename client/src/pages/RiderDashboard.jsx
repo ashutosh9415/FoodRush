@@ -193,7 +193,7 @@ function RiderDashboard() {
 
       const response =
         await api.put(
-          "/user/availability",
+          "/api/user/availability",
           {
             isActive: newStatus,
             isAvailable: newStatus,
@@ -243,7 +243,7 @@ function RiderDashboard() {
 
       const response =
         await api.post(
-          `/order/${orderId}/accept`
+          `/api/order/${orderId}/accept`
         );
 
       const acceptedOrder =
@@ -303,7 +303,7 @@ function RiderDashboard() {
   ) => {
     try {
       await api.post(
-        `/order/${orderId}/reject`
+        `/api/order/${orderId}/reject`
       );
 
       setDeliveryRequests(
@@ -338,7 +338,7 @@ function RiderDashboard() {
 
       const response =
         await api.put(
-          `/order/${activeOrder.orderId}/start-delivery`
+          `/api/order/${activeOrder.orderId}/start-delivery`
         );
 
       setActiveOrder(
@@ -393,7 +393,7 @@ const verifyOTP = async () => {
 
     const response =
       await api.post(
-        `/order/${activeOrder.orderId}/verify-otp`,
+        `/api/order/${activeOrder.orderId}/verify-otp`,
         {
           otp: deliveryOTP,
         }

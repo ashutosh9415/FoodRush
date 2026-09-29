@@ -23,7 +23,7 @@ function AuthProvider({
       try {
         const response =
           await api.get(
-            "/user/currentuser"
+            "/api/user/currentuser"
           );
 
         setUser(

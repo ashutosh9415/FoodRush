@@ -254,7 +254,7 @@ window.dispatchEvent(
           // SAVE CLIENT LOCATION
           // ==========================================
 
-          await api.put("/user/location", {
+          await api.put("/api/user/location", {
             latitude,
             longitude,
           });
@@ -268,7 +268,7 @@ window.dispatchEvent(
           // ==========================================
 
           const response = await api.get(
-            `/food/nearest-shop-foods?latitude=${latitude}&longitude=${longitude}`
+            `/api/food/nearest-shop-foods?latitude=${latitude}&longitude=${longitude}`
           );
 
           console.log(
@@ -470,7 +470,7 @@ window.dispatchEvent(
       // SAVE CLIENT LOCATION
       // ==========================================
 
-      await api.put("/user/location", {
+      await api.put("/api/user/location", {
         latitude,
         longitude,
       });
@@ -484,7 +484,7 @@ window.dispatchEvent(
       // ==========================================
 
       const foodResponse = await api.get(
-        `/food/nearest-shop-foods?latitude=${latitude}&longitude=${longitude}`
+        `/api/food/nearest-shop-foods?latitude=${latitude}&longitude=${longitude}`
       );
 
       console.log(

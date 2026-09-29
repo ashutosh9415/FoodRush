@@ -92,7 +92,7 @@ function TrackOrder() {
       try {
         const response =
           await api.get(
-            `/order/${orderId}`
+            `/api/order/${orderId}`
           );
 
         setOrder(

@@ -120,7 +120,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await api.post("/user/logout");
+      await api.post("/api/user/logout");
     } catch (error) {
       console.error(
         "Logout failed:",
@@ -244,7 +244,7 @@ function Navbar() {
 
               {user && (
                 <Link
-                  to="/orders"
+                  to="/api/orders"
                   className="text-gray-600 hover:text-orange-500 transition"
                 >
                   Orders
@@ -399,7 +399,7 @@ function Navbar() {
 
                   {user.role === "client" && (
                     <Link
-                      to="/orders"
+                      to="/api/orders"
                       onClick={() =>
                         setShowUserMenu(false)
                       }
@@ -604,7 +604,7 @@ function Navbar() {
 
                   {user.role === "client" && (
                     <Link
-                      to="/orders"
+                      to="/api/orders"
                       onClick={() =>
                         setShowUserMenu(false)
                       }

@@ -56,7 +56,7 @@ function Login() {
 
       const response =
         await api.post(
-          "/user/login",
+          "/api/user/login",
           {
             email: cleanEmail,
             password: cleanPassword,

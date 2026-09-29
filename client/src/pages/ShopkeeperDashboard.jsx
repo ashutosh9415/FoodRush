@@ -82,10 +82,10 @@ const [editFoodError, setEditFoodError] =
       ] = await Promise.all([
         // IMPORTANT:
         // Only this shopkeeper's foods
-        api.get("/food/my-foods"),
+        api.get("/api/food/my-foods"),
 
         // This shopkeeper's orders
-        api.get("/order/shopkeeper-orders"),
+        api.get("/api/order/shopkeeper-orders"),
       ]);
 
       console.log(
@@ -286,7 +286,7 @@ const [editFoodError, setEditFoodError] =
       }
 
       const response = await api.post(
-        "/food",
+        "/api/food",
         formData
       );
 
@@ -424,7 +424,7 @@ const handleUpdateFood = async (event) => {
     }
 
     const response = await api.put(
-      `/food/${editingFood._id}`,
+      `/api/food/${editingFood._id}`,
       formData
     );
 
@@ -477,7 +477,7 @@ const handleDeleteFood = async (foodId) => {
 
   try {
     await api.delete(
-      `/food/${foodId}`
+      `/api/food/${foodId}`
     );
 
     await load();
@@ -503,7 +503,7 @@ const handleDeleteFood = async (foodId) => {
   ) => {
     try {
       await api.put(
-        `/order/${orderId}/status`,
+        `/api/order/${orderId}/status`,
         {
           status,
         }
