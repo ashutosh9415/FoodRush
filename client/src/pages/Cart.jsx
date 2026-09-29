@@ -98,7 +98,7 @@ function Cart() {
 
       if (paymentMethod === "COD") {
         clearCart();
-        navigate("/api/orders");
+        navigate("/orders");
         return;
       }
 

@@ -848,7 +848,7 @@ const handleDeleteFood = async (foodId) => {
                     src={
                       food.image?.startsWith("http")
                         ? food.image
-                        : `http://localhost:5000${food.image}`
+                        : `https://foodrush-1q1y.onrender.com${food.image}`
                     }
                     alt={food.name}
                     className="w-full h-48 object-cover"
@@ -1385,7 +1385,7 @@ const handleDeleteFood = async (foodId) => {
                       "http"
                     )
                       ? editFoodForm.image
-                      : `http://localhost:5000${editFoodForm.image}`
+                      : `https://foodrush-1q1y.onrender.com${editFoodForm.image}`
                   }
                   alt="Current food"
                   className="w-40 h-40 object-cover rounded-xl border"
