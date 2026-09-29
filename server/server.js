@@ -33,6 +33,7 @@ const io = new Server(server, {
     origin: [
       "http://localhost:5173",
       "http://localhost:4173",
+      "https://foodrush-client-kajn3sp44-vashutosh236-1764s-projects.vercel.app",
     ],
     credentials: true,
   },
@@ -53,6 +54,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:4173",
+      "https://foodrush-client-kajn3sp44-vashutosh236-1764s-projects.vercel.app",
     ],
     credentials: true,
   })
@@ -226,8 +228,6 @@ setInterval(async () => {
 // Start Server
 // ======================================
 
-server.listen(PORT, () => {
-  console.log(
-    `Server running on port ${PORT}`
-  );
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
