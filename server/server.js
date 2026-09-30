@@ -54,6 +54,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:4173",
+      "https://foodrush-client-git-main-vashutosh236-1764s-projects.vercel.app",
       "https://foodrush-client-kajn3sp44-vashutosh236-1764s-projects.vercel.app",
     ],
     credentials: true,
