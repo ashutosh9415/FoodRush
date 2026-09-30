@@ -345,7 +345,7 @@ const loginUser = async (
       {
         httpOnly: true,
 
-        secure: false,
+        secure: true,
 
         sameSite: "lax",
 
@@ -585,7 +585,7 @@ const logoutUser = async (
       {
         httpOnly: true,
 
-        secure: false,
+        secure: true,
 
         sameSite: "lax",
       }
