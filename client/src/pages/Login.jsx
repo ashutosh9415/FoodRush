@@ -64,22 +64,28 @@ function Login() {
         );
 
       console.log(
-        "Login successful:",
-        response.data.user
+        "Login response:",
+        response.data
       );
 
-      setUser(
-        response.data.user
+      const currentUserResponse = await api.get(
+        "/api/user/currentuser"
       );
 
-      if (
-        response.data.user.role ===
-        "shopkeeper"
-      ) {
+      console.log(
+        "Current user after login:",
+        currentUserResponse.data.user
+      );
+
+      const loggedInUser =
+        currentUserResponse.data.user;
+
+      setUser(loggedInUser);
+
+      if (loggedInUser.role === "shopkeeper") {
         navigate("/shopkeeper");
       } else if (
-        response.data.user.role ===
-        "deliveryboy"
+        loggedInUser.role === "deliveryboy"
       ) {
         navigate("/rider");
       } else {
@@ -94,7 +100,7 @@ function Login() {
 
       setError(
         error.response?.data?.message ||
-          "Login failed"
+        "Login failed"
       );
 
     } finally {
